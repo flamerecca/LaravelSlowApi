@@ -18,7 +18,7 @@ Route::get('/user-check', function (Request $request) {
             status: Response::HTTP_UNPROCESSABLE_ENTITY
         );
     }
-    sleep(3);
+    sleep(5);
     return [
         'user' => $validated['user'],
         'response' => 'user information has been verified',
@@ -38,7 +38,7 @@ Route::get('/exchange-rate', function (Request $request) {
             status: Response::HTTP_UNPROCESSABLE_ENTITY
         );
     }
-    sleep(3);
+    sleep(5);
     return [
         'usd' => (int)$validated['usd'],
         'twd' => (int)$validated['usd'] * 30,
@@ -58,7 +58,7 @@ Route::get('/date-check', function (Request $request) {
             status: Response::HTTP_UNPROCESSABLE_ENTITY
         );
     }
-    sleep(3);
+    sleep(5);
     return [
         'date' => $validated['date'],
         'isChecked' => true,
